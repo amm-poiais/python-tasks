@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for subject in subjects %}
+    <li>
+        <a href="/subject?id={{subject.id}}">{{subject.name}}</a>
+        by
+        <a href="/teacher?id={{subject.teacher.id}}">{{subject.teacher.first_name}} {{subject.teacher.last_name}}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block header %}
+LOGIN HEADER
+{% endblock %}
+
+{% block column_2 %}
+<form method="post">
+    {% for field in login_form %}
+        {{field.label}}{{field}}{{field.errors}}
+    {% endfor %}
+    <input type="submit" value="Login">
+</form>
+{% endblock %}

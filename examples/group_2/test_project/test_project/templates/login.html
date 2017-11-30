@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block shapka %}
+<h1><b>LOGIN PAGE</b></h1>
+{% endblock %}
+{% block column_2 %}
+    <form method="post">
+        {{login_form.as_p}}
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{subject.name}}</h1>
+    <ol>
+        {% for subject_task in subject_tasks%}
+        <li>
+            <p><a href="/add-solution?id={{subject_task.id}}">{{subject_task.name}}</a></p>
+            <p>{{subject_task.description}}</p>
+        </li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

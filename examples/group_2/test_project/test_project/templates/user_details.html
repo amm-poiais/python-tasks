@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+</head>
+<body>
+    <p>
+        {{user.username}}
+    </p>
+    <p>
+        {{user.email}}
+    </p>
+    <p>
+        Latest 10 messages:
+    </p>
+    <div id="user_messages">
+        {% for user_message in user_messages %}
+            <div class="message" style="border: 2px solid black;">
+                <p>{{user_message.text}}</p>
+                <p>Posted on {{user_message.timestamp}}</p>
+                <p>Liked {{user_message.likes_number}} times</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

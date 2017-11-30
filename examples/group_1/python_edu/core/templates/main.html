@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div style="width: 100%; height: 50px; background-color: green;">
+        {% block header %}
+        {% endblock %}
+    </div>
+    <div>
+        <div
+                style="float: left;  min-height: 1000px;
+                width: 20%; background-color: grey;">
+            КОЛОНКА_1
+        </div>
+        <div style="float: left; width: 60%; min-height: 1000px; background-color: blue;">
+        {% block column_2 %}
+        {% endblock %}
+        </div >
+        <div style="float: left; width: 20%; min-height: 1000px; background-color: red;">
+            КОЛОНКА_3
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>

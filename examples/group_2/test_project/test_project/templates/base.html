@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="shapka"
+         style="width: 100%; height: 100px; background-color: #336699">
+    {% block shapka %}{% endblock %}
+    </div>
+    <div class="content">
+        <div class="column_1"
+            style="float: left;min-height: 1000px; width: 20%; background-color: #003366;"
+        {% block column_1 %}{% endblock %}
+        ></div>
+        <div class="column_2"
+            style="float: left;min-height: 1000px;width: 60%; background-color: #6600cc;">
+        {% block column_2 %}{% endblock %}
+
+        </div>
+        <div class="column_3"
+            style="float: left;min-height: 1000px;width: 20%; background-color: #00ff00;"></div>
+                {% block column_3 %}{% endblock %}
+
+    </div>
+</body>
+</html>

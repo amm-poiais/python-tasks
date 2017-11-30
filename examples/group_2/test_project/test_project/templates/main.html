@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send message</title>
+</head>
+<body>
+    <form method="post" action="/post_message">
+        <input type="text" name="message">
+        <select name="tags" multiple="multiple">
+            {% for tag in tags %}
+                <option value="{{tag.text}}">{{tag.text}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
